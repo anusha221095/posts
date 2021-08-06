@@ -1,0 +1,23 @@
+<!-- <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Fluid jumbotron</h1>
+          <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+        </div>
+      </div> -->
+
+<h2>{{post?.title}}</h2>
+
+<p>{{post?.description}}</p>
+
+<img src="{{post?.imagePath}}" class="img-responsive" />
+
+<h2>Author: {{post?.author}}</h2>
+
+<h4>DateCreated:{{post?.datetimeCreated}}</h4>
+
+<button type="button" class="btn btn-default btn-sm" (click)="like()">
+        <span class="glyphicon glyphicon-thumbs-up"></span> Like {{post?.numberOfLikes}}
+</button><br><br>
+
+<button class="btn btn-primary" (click)="onEdit()">Edit</button> |
+<button class="btn btn-danger" (click)="onDelete()">Delete</button>
